@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1
+  ordered: false
+  ordertime: 2019-10-25 15:47:40
+
+two:
+  number: 1
+  ordered: false
+  ordertime: 2019-10-25 15:47:40
