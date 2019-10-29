@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :users
+  get 'profile', to: 'users#profile'
   get 'categories', to: 'categories#index'
   get 'categories/new'
   get 'categories/create'
   get 'categories/update'
   get 'categories/destroy'
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
   resources :products
-  # resources :users 
-  get 'users', to: 'users#new'
   root 'products#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
