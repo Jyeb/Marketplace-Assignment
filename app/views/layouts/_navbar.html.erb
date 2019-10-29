@@ -1,0 +1,15 @@
+  <nav>
+  <div>
+    <h4>Product Search</h4>
+      <%= form_tag(root_path, method: :get) do %>
+      <%= text_field_tag(:search, params[:search], placeholder: "Search for Anything")%>
+      <%= submit_tag("Search")%>
+      <% end %>
+    </div>
+      <ul>
+        <li>Home</li>
+        <li>categories</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+  </nav>

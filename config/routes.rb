@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  get 'products/index'
-  get 'products/new'
-  get 'products/edit'
-  get 'products/create'
-  get 'products/destroy'
+  get 'categories', to: 'categories#index'
+  get 'categories/new'
+  get 'categories/create'
+  get 'categories/update'
+  get 'categories/destroy'
+  resources :products
   # resources :users 
   get 'users', to: 'users#new'
-  root 'users#index'
+  root 'products#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
