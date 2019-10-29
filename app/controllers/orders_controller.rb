@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
   def destroy
   end
 
-  def your_orders
+  def orders
     @orders = Order.all 
   end
 

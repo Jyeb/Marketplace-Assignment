@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'orders/your_orders'
+  get 'orders', to: 'orders#orders'
   devise_for :users
   get 'profile', to: 'users#profile'
   get 'categories', to: 'categories#index'
