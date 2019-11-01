@@ -1,6 +1,6 @@
 module ApplicationHelper
   def page_title(page_title = '')
-    site_name = "Sitename"
+    site_name = "Retailhive"
     if page_title.empty? 
       @site_name
     else

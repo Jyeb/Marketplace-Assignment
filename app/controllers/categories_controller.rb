@@ -12,7 +12,6 @@ class CategoriesController < ApplicationController
     if @category.save 
       redirect_to categories_path
     # else
-
     end
   end
 
