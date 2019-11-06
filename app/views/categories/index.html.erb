@@ -1,8 +1,10 @@
 <% provide(:title, "Categories")%>
-<h1>Categories</h1>
+<h1 class="title">Categories</h1>
+<ul>
 <% @categories.each do |category| %>
-  <h4><li><%= link_to(category.name, root_path) %></li></h4>
+  <h4 class="title"><li><%= link_to(category.name, root_path) %></li></h4>
 <% end %>
+</ul>
 
 
  

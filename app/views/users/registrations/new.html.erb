@@ -5,31 +5,31 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    <label class="label"<%= f.label :name %></label>
+    <input class="input"<%= f.text_field :name, autofocus: true, autocomplete: "name" %>
   </div>
   
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autocomplete: "email" %>
+    <label class="label"<%= f.label :email %></label>
+    <input class="input"<%= f.email_field :email, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <label class="label"<%= f.label :password %></label>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <input class="input"<%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <label class="label"<%= f.label :password_confirmation %><br />
+    <input class="input"<%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="columns">
+    <div class="column">
+      <button class="button is-primary" type="submit">Sign Up</button>
+    </div>
   </div>
 <% end %>
-
-<%= render "users/shared/links" %>

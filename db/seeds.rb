@@ -12,3 +12,92 @@ Category.create(name: "Clothing")
 Category.create(name: "Video Games")
 Category.create(name: "Vehicles")
 Category.create(name: "Sporting")
+# categories = [
+#   {
+#     name: "Books"
+#     products: Product.create([
+#       {
+#       name: "",
+#       price: ,
+#       rating: ,
+#       description: "",
+#     },
+#     {
+#       name: "",
+#       price: ,
+#       rating: ,
+#       description: "",
+#     },
+#     {
+#       name: "",
+#       price: ,
+#       rating: ,
+#       description: "",
+#     },
+#     {
+#       name: "",
+#       price: ,
+#       rating: ,
+#       description: "",
+#     },
+#     ]),
+#   }
+#   {
+#     name: "Books"
+#     products: Product.create([
+#       {
+#       name: "",
+#       price: ,
+#       rating: ,
+#       description: "",
+#     },
+#     {
+#       name: "",
+#       price: ,
+#       rating: ,
+#       description: "",
+#     },
+#     {
+#       name: "",
+#       price: ,
+#       rating: ,
+#       description: "",
+#     },
+#     {
+#       name: "",
+#       price: ,
+#       rating: ,
+#       description: "",
+#     },
+#     ]),
+#   }
+#   {
+#     name: "Books"
+#     products: Product.create([
+#       {
+#       name: "",
+#       price: ,
+#       rating: ,
+#       description: "",
+#     },
+#     {
+#       name: "",
+#       price: ,
+#       rating: ,
+#       description: "",
+#     },
+#     {
+#       name: "",
+#       price: ,
+#       rating: ,
+#       description: "",
+#     },
+#     {
+#       name: "",
+#       price: ,
+#       rating: ,
+#       description: "",
+#     },
+#     ]),
+#   }
+# ]
