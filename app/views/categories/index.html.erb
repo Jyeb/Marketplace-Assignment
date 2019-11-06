@@ -1,10 +1,15 @@
 <% provide(:title, "Categories")%>
-<h1 class="title">Categories</h1>
-<ul>
-<% @categories.each do |category| %>
-  <h4 class="title"><li><%= link_to(category.name, root_path) %></li></h4>
-<% end %>
-</ul>
+<h1 class="title has-text-centered">Categories</h1>
+<div class="tabs is-centered">
+  <ul>
+    <li class="is-active">
+  <% @categories.each do |category| %>
+      <a>
+        <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+        <span><%= category.name%></span>
+      </a>
+    </li>
+  <% end %>
+  </ul>
+</div>
 
-
- 

@@ -14,7 +14,6 @@ class CategoriesController < ApplicationController
     @category = category.create(category_params)
     if @category.save 
       redirect_to categories_path
-    # else
     end
   end
 
@@ -22,7 +21,6 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-
   end
   
   private

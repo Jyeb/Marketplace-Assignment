@@ -7,10 +7,8 @@
     <li class="navbar-item"><%= link_to('Categories', categories_path, class: "navbar-link") %></li>
     <div class="navbar-dropdown">
     <% Category.all.each do |category| %>
-      <a class="navbar-item">
-      <%= link_to(category.name, "#") %>
-      </a>
-      <% end %>
+      <%= link_to(category.name, "#", class: "navbar-item") %>
+    <% end %>
   </div>
   </div>
 </div>
