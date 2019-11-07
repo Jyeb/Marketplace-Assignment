@@ -8,14 +8,6 @@
 Category.destroy_all
 Product.destroy_all
 Category.create(name: "Sporting")
-Product.create([
-  {
-    name: "Book 1",
-    price: 50,
-    rating: 4,
-    description: "placeholder text for book 1",
-  },
-])
 categories = [
   {
     name: "Books",
