@@ -1,8 +1,10 @@
 <% provide(:title, "#{current_user.name}")%>
+
 <h1 class="title has-text-centered">User Profile</h1>
 <ul>
 <div class="columns card">
-  <div class="column is-one-quarter">
+  <%= link_to edit_user_registration_path do %>
+  <div class="hover-color column is-one-quarter">
     <div class="card">
     <div class="card-image">
     <figure class="image">
@@ -12,13 +14,15 @@
     <div class="card-content">
       <div class="media">
         <div class="media-content">
-          <p class="title is-4 has-text-centered"><li class="text-coloring has-text-centered"><%= link_to('Edit Profile', edit_user_registration_path) %></li></p>
+          <p class="title is-4 has-text-centered"><a class="link-color">Edit Profile</a></p>
         </div>
       </div>
   </div>
 </div>
   </div>
-  <div class="column is-one-quarter">
+  <% end %>
+    <%= link_to edit_user_registration_path do %>
+  <div class="hover-color column is-one-quarter">
     <div class="card">
     <div class="card-image">
     <figure class="image">
@@ -28,13 +32,15 @@
     <div class="card-content">
       <div class="media">
         <div class="media-content">
-          <p class="title is-4 has-text-centered"><li class="has-text-centered"><%= link_to('Your Orders', orders_path)%></li></p>
+          <p class="title is-4 has-text-centered"><a class="link-color">Your Orders</a></p>
         </div>
       </div>
   </div>
 </div>
   </div>
-  <div class="column is-one-quarter">
+    <% end %>
+    <%= link_to address_path do %>
+  <div class="hover-color column is-one-quarter">
     <div class="card">
     <div class="card-image">
     <figure class="image">
@@ -44,13 +50,15 @@
     <div class="card-content">
       <div class="media">
         <div class="media-content">
-          <p class="title is-4 has-text-centered"><li class="has-text-centered"><%= link_to('Add Address', address_path)%></p>
+          <p class="title is-4 has-text-centered"><a class="link-color">Add Address</a></p>
         </div>
       </div>
   </div>
 </div>
 </div>
- <div class="column is-one-quarter">
+  <% end %>
+  <%= link_to product_path do %>
+ <div class="hover-color column is-one-quarter">
     <div class="card">
     <div class="card-image">
     <figure class="image">
@@ -60,14 +68,16 @@
     <div class="card-content">
       <div class="media">
         <div class="media-content">
-          <p class="title is-4 has-text-centered"><li class="has-text-centered"><%= link_to('Sell an Item', product_path)%></p>
+          <p class="title is-4 has-text-centered"><a class="link-color">Sell an Item</a></p>
         </div>
       </div>
   </div>
 </div>
+</div>
+  <% end %>
 <% if current_user.has_role? :admin%>
-  </div>
-    <div class="column is-one-quarter">
+    <%= link_to add_category_path do %>
+    <div class="hover-color column is-one-quarter">
     <div class="card">
     <div class="card-image">
     <figure class="image">
@@ -78,16 +88,18 @@
       <div class="media">
         <div class="media-content">
           <p class="title is-4 has-text-centered">  
-            <li class="has-text-centered"><%= link_to('Create a Category', add_category_path)%></li>
+            <a class="link-color">Create a Category</a>
           </p>
         </div>
       </div>
   </div>
 </div>
 </div>
+  <% end %>
 <% end %>
 <% if current_user.has_role? :admin%>
-    <div class="column is-one-quarter">
+    <%= link_to add_category_path do %>
+    <div class="hover-color column is-one-quarter">
     <div class="card">
     <div class="card-image">
     <figure class="image">
@@ -98,13 +110,14 @@
       <div class="media">
         <div class="media-content">
           <p class="title is-4 has-text-centered">  
-            <li class="has-text-centered"><%= link_to('Create a Category', add_category_path)%></li></p>
+            <a class="link-color">Admin Dashboard</a></p>
          
         </div>
       </div>
   </div>
 </div>
 </div>
+  <% end %>
  <% end %>
 </div>
 </div>

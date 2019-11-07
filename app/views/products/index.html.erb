@@ -1,7 +1,7 @@
 <% provide(:title, "Home")%>
 <% provide(:background, image_tag("shopping_cart.png", class: "background-image")) %>
 <%= render 'layouts/searchbar' %>
- <div class="card columns is-variable">
+ <div class="card-pos card columns is-variable">
 <% @products.sample(10).each do |product| %>
   <div class="cardstuff column">
     <header class="card-header">

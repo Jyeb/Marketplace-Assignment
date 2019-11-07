@@ -11,6 +11,12 @@ a {
     color: white;
   }
 }
+
+.hover-color {
+  &:hover {
+    opacity: 0.5;
+  }
+}
 .nav-item {
   color: white;
   &:hover {
@@ -19,14 +25,21 @@ a {
     outline-offset: -1px;
   }
 }
-
+.link-color {
+  color: black;
+  &:hover {
+    color: black;
+  }
+}
 .card {
   background-color: #f4f4f4;
   flex-wrap: wrap;
-  margin-top: 150px;
   .footer-item {
     outline: 1px solid white;
   }
+}
+.card-pos {
+  margin-top: 150px;
 }
 
 .card-header-title {
