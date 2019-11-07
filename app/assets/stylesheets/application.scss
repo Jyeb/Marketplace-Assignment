@@ -1,11 +1,36 @@
 @import "bulma";
 
+body {
+  background-color: #f4f4f4;
+
+}
+
 a {
-  color: #D5393B;
+  color: white; 
+  &:hover {
+    color: white;
+  }
+}
+.nav-item {
+  color: white;
+  &:hover {
+    color: white;
+    outline: 1px solid white;
+    outline-offset: -1px;
+  }
 }
 
 .card {
+  background-color: #f4f4f4;
   flex-wrap: wrap;
+  margin-top: 150px;
+  .footer-item {
+    outline: 1px solid white;
+  }
+}
+
+.card-header-title {
+  display: block;
 }
 
 .columns {
@@ -13,13 +38,26 @@ a {
 }
 .column {
   border-color: white;
+  border-style: solid;
+  border-width: 5px;
   margin: 10px 10px 10px 10px;
-}
-.cardstuff {
-  background-color: greenyellow;
 }
 
 .thingy {
   margin-top: 10px;
   margin-left: 0px;
+}
+
+.searchborder {
+  margin-top: 150px;
+}
+.text-coloring {
+  color: black;
+}
+
+.background-image {
+  position: absolute;
+  height: 360px;
+  width: 100%;
+  opacity: 0.7;
 }

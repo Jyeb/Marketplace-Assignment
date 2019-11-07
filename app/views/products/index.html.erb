@@ -1,14 +1,17 @@
 <% provide(:title, "Home")%>
+<% provide(:background, image_tag("shopping_cart.png", class: "background-image")) %>
 <%= render 'layouts/searchbar' %>
-
  <div class="card columns is-variable">
-<% @products.each do |product| %>
+<% @products.sample(10).each do |product| %>
   <div class="cardstuff column">
     <header class="card-header">
-      <p class="card-header-title">
+      <p class="card-header-title text has-text-centered">
         <%= product.name %>
       </p>
     </header>
+    <figure class="image">
+      <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+    </figure>
     <div class="card-content">
       <div class="content">
         <%= product.description %>
@@ -22,3 +25,6 @@
     </div>
 <% end %>
 </div>
+
+
+  
