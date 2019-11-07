@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+  def setup 
+   
+  end
+
   def index
     @products = Product.all
   end
@@ -12,6 +16,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = product.create(product_params)
+    @product.product_image.attach(product_params([:product][:product_image])
     if @product.save 
       redirect_to root_path
     else 
