@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'product', to: 'products#new'
+  get 'add_category', to: 'categories#new'
   root 'products#index'
 end

@@ -3,3 +3,23 @@
 a {
   color: #D5393B;
 }
+
+.card {
+  flex-wrap: wrap;
+}
+
+.columns {
+  justify-content: center;
+}
+.column {
+  border-color: white;
+  margin: 10px 10px 10px 10px;
+}
+.cardstuff {
+  background-color: greenyellow;
+}
+
+.thingy {
+  margin-top: 10px;
+  margin-left: 0px;
+}

@@ -1,8 +1,107 @@
 <% provide(:title, "#{current_user.name}")%>
-<h1 class="title">User Profile</h1>
+<h1 class="title has-text-centered">User Profile</h1>
 <ul>
-  <li><%= link_to('Edit Profile', edit_user_registration_path) %></li>
-  <li><%= link_to('Your Orders', orders_path)%>
-  <li><%= link_to('Add Address', address_path)%>
-  <li><%= link_to('Sell an Item', product_path)%>
+<div class="columns card">
+  <div class="column is-one-quarter">
+    <div class="card">
+    <div class="card-image">
+    <figure class="image">
+      <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+    </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="title is-4 has-text-centered"><li class="has-text-centered"><%= link_to('Edit Profile', edit_user_registration_path) %></li></p>
+        </div>
+      </div>
+  </div>
+</div>
+  </div>
+  <div class="column is-one-quarter">
+    <div class="card">
+    <div class="card-image">
+    <figure class="image">
+      <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+    </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="title is-4 has-text-centered"><li class="has-text-centered"><%= link_to('Your Orders', orders_path)%></li></p>
+        </div>
+      </div>
+  </div>
+</div>
+  </div>
+  <div class="column is-one-quarter">
+    <div class="card">
+    <div class="card-image">
+    <figure class="image">
+      <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+    </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="title is-4 has-text-centered"><li class="has-text-centered"><%= link_to('Add Address', address_path)%></p>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+ <div class="column is-one-quarter">
+    <div class="card">
+    <div class="card-image">
+    <figure class="image">
+      <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+    </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="title is-4 has-text-centered"><li class="has-text-centered"><%= link_to('Sell an Item', product_path)%></p>
+        </div>
+      </div>
+  </div>
+</div>
+  </div>
+    <div class="column is-one-quarter">
+    <div class="card">
+    <div class="card-image">
+    <figure class="image">
+      <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+    </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="title is-4 has-text-centered">  <% if current_user.has_role? :admin%>
+            <li class="has-text-centered"><%= link_to('Create a Category', add_category_path)%>
+          <% end %></p>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+    <div class="column is-one-quarter">
+    <div class="card">
+    <div class="card-image">
+    <figure class="image">
+      <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+    </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="title is-4 has-text-centered">  <% if current_user.has_role? :admin%>
+            <li class="has-text-centered"><%= link_to('Create a Category', add_category_path)%>
+          <% end %></p>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
 </ul>

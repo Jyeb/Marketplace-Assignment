@@ -1,2 +1,24 @@
 <% provide(:title, "Home")%>
 <%= render 'layouts/searchbar' %>
+
+ <div class="card columns is-variable">
+<% @products.each do |product| %>
+  <div class="cardstuff column">
+    <header class="card-header">
+      <p class="card-header-title">
+        <%= product.name %>
+      </p>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        <%= product.description %>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <li class="card-footer-item"><%= product.price %></li>
+      <li class="card-footer-item"> <%= product.rating %></li>
+      <li class="card-footer-item"> <%= Category.find_by(id: product.category_ids).name %></li>
+    </footer>
+    </div>
+<% end %>
+</div>

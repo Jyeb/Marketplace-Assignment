@@ -14,6 +14,9 @@ class ProductsController < ApplicationController
     @product = product.create(product_params)
     if @product.save 
       redirect_to root_path
+    else 
+      flash[:alert] = product.errors.full_messages.join('<br>')
+      # redirect_to 
     end 
   end
 
