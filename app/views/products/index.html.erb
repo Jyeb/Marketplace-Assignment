@@ -17,6 +17,7 @@
     <footer class="card-footer">
       <li class="card-footer-item"><%= product.price %></li>
       <li class="card-footer-item"> <%= product.rating %></li>
+      <li class="card-footer-item"> <%= Category.find_by(id: product.category_ids).name %></li>
     </footer>
     </div>
 <% end %>
