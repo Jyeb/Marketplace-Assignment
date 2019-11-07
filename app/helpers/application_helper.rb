@@ -7,4 +7,9 @@ module ApplicationHelper
       page_title + " | " + site_name
     end
   end
+
+  def category_helper(product)
+    Category.find_by(id: product.category_ids).name
+  end
 end
+
