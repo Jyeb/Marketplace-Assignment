@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def category_helper(product)
-    Category.find_by(id: product.category_ids).name
+    Category.find_by(id: product.category_ids)
   end
 end
 
