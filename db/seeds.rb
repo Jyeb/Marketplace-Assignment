@@ -6,11 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Category.destroy_all
-Category.create(name: "Sporting")
+Category.create!(name: "Sporting")
+Product.create!([
+  {
+    name: "Book 1",
+    price: 50,
+    rating: 4,
+    description: "placeholder text for book 1",
+  },
+])
 categories = [
   {
     name: "Books",
-    products: Product.create([
+    products: Product.create!([
     {
       name: "Book 1",
       price: 50,
@@ -39,7 +47,7 @@ categories = [
   },
   {
     name: "Electronics",
-    products: Product.create([
+    products: Product.create!([
     {
       name: "phone 1",
       price: 50,
@@ -68,7 +76,7 @@ categories = [
   },
   {
     name: "Clothing",
-    products: Product.create([
+    products: Product.create!([
     {
       name: "shirt 1",
       price: 50,
@@ -97,7 +105,7 @@ categories = [
   },
   {
     name: "Vehicles",
-    products: Product.create([
+    products: Product.create!([
     {
       name: "car 1",
       price: 50,
@@ -125,5 +133,5 @@ categories = [
     ])
   },
 ]
-Category.create(categories)
+Category.create!(categories)
   
