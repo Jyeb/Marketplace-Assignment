@@ -2,9 +2,7 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
   end
-  def category_helper(product)
-    Category.find_by(id: product.category_ids).name
-  end
+
   def new
     @product = Product.new
   end

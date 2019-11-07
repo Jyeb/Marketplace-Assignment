@@ -1,9 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  def category_helper(product)
-    Category.find_by(id: product.category_ids).name
-  end
   protected
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :country, :street_address, :postcode, :suburb, :state])
