@@ -7,124 +7,230 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Category.destroy_all
 Product.destroy_all
-Category.create(name: "Sporting")
-categories = [
+User.destroy_all
+books = Category.create([
   {
-    name: "Books",
-    products: Product.create([
-    {
-      name: "Book 1",
-      price: 50,
-      rating: 4,
-      description: "placeholder text for book 1",
-    },
-    {
-      name: "Book 2",
-      price: 45,
-      rating: 3,
-      description: "Placeholder text for book 2",
-    },
-    {
-      name: "Book 3",
-      price: 400,
-      rating: 5,
-      description: "Placeholder text for book 3",
-    },
-    {
-      name: "Book 4",
-      price: 600,
-      rating: 1,
-      description: "Placeholder text for book 4",
-    },
-    ])
-  },
+  name: "Books",
+  }
+])
+electronics = Category.create([
   {
-    name: "Electronics",
-    products: Product.create([
-    {
-      name: "phone 1",
-      price: 50,
-      rating: 4,
-      description: "placeholder text for phone 1",
-    },
-    {
-      name: "phone 2",
-      price: 45,
-      rating: 3,
-      description: "Placeholder text for phone 2",
-    },
-    {
-      name: "phone 3",
-      price: 400,
-      rating: 5,
-      description: "Placeholder text for phone 3",
-    },
-    {
-      name: "phone 4",
-      price: 600,
-      rating: 1,
-      description: "Placeholder text for phone 4",
-    },
-    ])
-  },
+  name: "Electronics",
+  }
+])
+sporting = Category.create([
   {
-    name: "Clothing",
-    products: Product.create([
-    {
-      name: "shirt 1",
-      price: 50,
-      rating: 4,
-      description: "placeholder text for shirt 1",
-    },
-    {
-      name: "shirt 2",
-      price: 45,
-      rating: 3,
-      description: "Placeholder text for shirt 2",
-    },
-    {
-      name: "shirt 3",
-      price: 400,
-      rating: 5,
-      description: "Placeholder text for shirt 3",
-    },
-    {
-      name: "shirt 4",
-      price: 600,
-      rating: 1,
-      description: "Placeholder text for shirt 4",
-    },
-    ])
-  },
+  name: "Sporting",
+  }
+])
+clothing = Category.create([
   {
-    name: "Vehicles",
+  name: "Clothing",
+  }
+])
+vehicles = Category.create([
+  {
+  name: "Vehicles",
+  }
+])
+user = [
+  {
+    name: "first User",
+    email: "first@example.com",
+    password: "foobar",
+    password_confirmation: "foobar",
     products: Product.create([
-    {
-      name: "car 1",
-      price: 50,
-      rating: 4,
-      description: "placeholder text for car 1",
-    },
-    {
-      name: "car 2",
-      price: 45,
-      rating: 3,
-      description: "Placeholder text for car 2",
-    },
-    {
-      name: "car 3",
-      price: 400,
-      rating: 5,
-      description: "Placeholder text for car 3",
-    },
-    {
-      name: "car 4",
-      price: 600,
-      rating: 1,
-      description: "Placeholder text for car 4",
-    },
+      {
+        name: "First book",
+        price: 50, 
+        rating: 5,
+        description: "Placeholder text for book description",
+        categories: books,
+      },
+      {
+        name: "Second book",
+        price: 40, 
+        rating: 5,
+        description: "Placeholder text for book description",
+        categories: books,
+      },
+      {
+        name: "third book",
+        price: 40, 
+        rating: 5,
+        description: "Placeholder text for book description",
+        categories: books,
+      },
+      {
+        name: "fourth book",
+        price: 40, 
+        rating: 5,
+        description: "Placeholder text for book description",
+        categories: books,
+      },
     ])
   },
 ]
-Category.create(categories)
-  
+
+user2 = [
+  {
+    name: "second User",
+    email: "second@example.com",
+    password: "foobar",
+    password_confirmation: "foobar",
+    products: Product.create([
+      {
+        name: "First phone",
+        price: 50, 
+        rating: 5,
+        description: "Placeholder text for Electronics description",
+        categories: electronics,
+      },
+      {
+        name: "Second phone",
+        price: 40, 
+        rating: 5,
+        description: "Placeholder text for Electronics description",
+        categories: electronics,
+      },
+      {
+        name: "third phone",
+        price: 40, 
+        rating: 5,
+        description: "Placeholder text for Electronics description",
+        categories: electronics,
+      },
+      {
+        name: "fourth phone",
+        price: 40, 
+        rating: 5,
+        description: "Placeholder text for Electronics description",
+        categories: electronics,
+      },
+    ])
+  },
+]
+
+user3 = [
+  {
+    name: "Third User",
+    email: "third@example.com",
+    password: "foobar",
+    password_confirmation: "foobar",
+    products: Product.create([
+      {
+        name: "racquet",
+        price: 50, 
+        rating: 5,
+        description: "Placeholder text for sporting description",
+        categories: sporting,
+      },
+      {
+        name: "football",
+        price: 40, 
+        rating: 5,
+        description: "Placeholder text for sporting description",
+        categories: sporting,
+      },
+      {
+        name: "Cricket Bat",
+        price: 40, 
+        rating: 5,
+        description: "Placeholder text for sporting description",
+        categories: sporting,
+      },
+      {
+        name: "Rugby Ball",
+        price: 40, 
+        rating: 5,
+        description: "Placeholder text for book4 description",
+        categories: sporting,
+      },
+    ])
+  },
+]
+user4 = [
+  {
+    name: "fourth User",
+    email: "fourth@example.com",
+    password: "foobar",
+    password_confirmation: "foobar",
+    products: Product.create([
+      {
+        name: "Shirt",
+        price: 400, 
+        rating: 4,
+        description: "Placeholder text for book description",
+        categories: clothing,
+      },
+      {
+        name: "Pants",
+        price: 65, 
+        rating: 4,
+        description: "Placeholder text for book2 description",
+        categories: clothing,
+      },
+      {
+        name: "Jacket",
+        price: 30, 
+        rating: 4,
+        description: "Placeholder text for book3 description",
+        categories: clothing,
+      },
+      {
+        name: "Shorts",
+        price: 200, 
+        rating: 4,
+        description: "Placeholder text for book4 description",
+        categories: clothing,
+      },
+    ])
+  },
+]
+
+user5 = [
+  {
+    name: "fifth User",
+    email: "fifth@example.com",
+    password: "foobar",
+    password_confirmation: "foobar",
+    products: Product.create([
+      {
+        name: "car",
+        price: 50, 
+        rating: 5,
+        description: "Placeholder text for sporting description",
+        categories: vehicles,
+      },
+      {
+        name: "car2",
+        price: 40, 
+        rating: 5,
+        description: "Placeholder text for sporting description",
+        categories: vehicles,
+      },
+      {
+        name: "MotorBike",
+        price: 40, 
+        rating: 5,
+        description: "Placeholder text for sporting description",
+        categories: vehicles,
+      },
+      {
+        name: "Truck",
+        price: 40, 
+        rating: 5,
+        description: "Placeholder text for book4 description",
+        categories: vehicles,
+      },
+    ])
+  },
+]
+
+
+
+User.create(user)
+User.create(user2)
+User.create(user3)
+User.create(user4)
+User.create(user5)

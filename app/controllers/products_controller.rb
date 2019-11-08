@@ -1,8 +1,4 @@
 class ProductsController < ApplicationController
-  def setup 
-   
-  end
-
   def index
     @products = Product.all
   end

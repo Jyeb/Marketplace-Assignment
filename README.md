@@ -34,7 +34,7 @@ user stories here
 
 Insert wireframes here
 
-## ERD
+## ERD (Entity Relationship Diagram)
 
 Below is the entity relationship diagram which displays the model relation using computer science notation. 
 The information below represents the following relationships.
@@ -81,4 +81,5 @@ Listed below is the tech stack used for website development, and the areas which
   * Image hosting (Cloudinary) 
   * Payment options (Stripe)
    
-  
+ ## Project Tasks
+ Put development process info here
