@@ -1,9 +1,5 @@
-<% provide(:title, "Home")%>
-<% provide(:background, image_tag("shopping_cart.png", class: "background-image")) %>
-<%= render 'layouts/searchbar' %>
- <div class="card-pos card columns is-variable">
-<% @products.sample(9).each do |product| %>
-<%= link_to show_product_path(product) do %>
+<h1>Your Listed Items</h1>
+<%= current_user.products.each do |product| %>
   <div class="displayitem column">
     <header class="card-header">
       <p class="card-header-title text has-text-centered">
@@ -24,6 +20,4 @@
       <li class="card-footer-item"><%=  category_helper(product)%></li>
     </footer>
     </div>
-    <% end %>
 <% end %>
-</div>

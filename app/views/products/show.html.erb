@@ -1,29 +1,29 @@
 <% provide(:title, "#{@product.name}")%>
 
 <div class="modal is-active">
-  <div class="modal-background"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Modal title</p>
-      <button class="delete" aria-label="close"></button>
-    </header>
-    <section class="modal-card-body">
-      <h1 class="title has-text-centered"><%= @product.name %></h1>
-      <img class="image has-image-centered" src="http://lorempixel.com/200/200" alt="Placeholder image">
-      <br>
-      <p class="text has-text-centered"><%= @product.description %></p>
-     <footer class="card-footer">
-      <li class="card-footer-item"><%= @product.price %></li>
-      <li class="card-footer-item"> <%= @product.rating %></li>
-      <li class="card-footer-item"><%=  category_helper(@product)%></li>
-    </section>
-    <footer class="modal-card-foot">
-    <% if user_signed_in? %>
-      <button class="button is-success">Buy Now</button>
-    <% else %>
-      <p>Please login to continue</p>
-    <% end %>
-      <button class="button">Cancel</button>
-    </footer>
-  </div>
+<div class="modal-background"></div>
+<div class="modal-card">
+  <header class="modal-card-head">
+    <p class="modal-card-title">Modal title</p>
+    <button class="delete" aria-label="close"></button>
+  </header>
+  <section class="modal-card-body">
+    <h1 class="title has-text-centered"><%= @product.name %></h1>
+    <img class="image has-image-centered" src="http://lorempixel.com/200/200" alt="Placeholder image">
+    <br>
+    <p class="text has-text-centered"><%= @product.description %></p>
+    <footer class="card-footer">
+    <li class="card-footer-item"><%= @product.price %></li>
+    <li class="card-footer-item"> <%= @product.rating %></li>
+    <li class="card-footer-item"><%=  category_helper(@product)%></li>
+  </section>
+  <footer class="modal-card-foot">
+  <% if user_signed_in? %>
+    <button class="button is-success">Buy Now</button>
+  <% else %>
+    <p>Please login to continue</p>
+  <% end %>
+    <button class="button">Cancel</button>
+  </footer>
+</div>
 </div>
