@@ -1,23 +1,16 @@
-<%= form_tag(root_path, method: :get) do %>
+<%= form_with(url: categories_path, method: 'get', local: true) do |f| %>
 <div class="field has-addons-centered">
 <div class="field has-addons has-addons-centered searchborder">
   <p class="control">
     <span class="select is-large">
-      <select>
-      <option>All</option>
-      <% Category.all.each do |category| %>
-          <option><%= category.name %></option>
-      <% end %>
-      </select>
+      <%= f.select(:category, options_for_select([['All', 'All'], *Category.all.map(&:name).zip(Category.all.map(&:name))]))%>
     </span>
   </p>
 <div class="control">
-  <%= text_field_tag :search, params[:search], placeholder: "Search for Anything", class: "input is-large"%>
+  <%= f.text_field(:search, placeholder: "Search for Anything", class: "input is-large") %>
 </div>
 <div class=control>
-  <%= submit_tag "Search", class: "control button is-info is-large" %>
+  <%= f.submit "Search", class: "control button is-info is-large" %>
 </div>
 </div>
 <% end %>
-
-

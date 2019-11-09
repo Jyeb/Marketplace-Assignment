@@ -228,10 +228,9 @@ user5 = [
   },
 ]
 
-
-
 User.create(user)
 User.create(user2)
 User.create(user3)
 User.create(user4)
 User.create(user5)
+User.first.add_role :admin

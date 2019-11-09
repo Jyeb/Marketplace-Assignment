@@ -1,13 +1,14 @@
 <% provide(:title, "Categories")%>
 
+
 <h1 class="title has-text-centered">Categories</h1>
 <div class="tabs is-centered">
   <ul>
-  <li class="is-active tablinks" onclick="openTab(event, 'All')">
+  <li class="<%= 'is-active 'if params[:category] == 'All' %> tablinks" onclick="openTab(event, 'All')">
     <a>All</a>
   </li>
   <% @categories.each do |category| %>
-  <li class="tablinks" onclick="openTab(event, '<%= category.name %>' )">
+  <li class="tablinks <%= 'is-active 'if params[:category] == category.name %>" onclick="openTab(event, '<%= category.name %>' )">
   <a>
     <%= category.name %>
   </a>
@@ -21,9 +22,15 @@
   <%= render 'categories/all' %>  
 </div>
 </div>
+
 <script type="text/javascript"> 
+
+var category = '<%= params[:category] %>'
+var search = '<%= params[:search] %>'
+var tabcontent
+var displayitems
+
 function openTab(event, tabId) {
-tabcontent = document.getElementsByClassName('tabcontent');
   for (i=0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = 'none';
   }
@@ -33,5 +40,31 @@ tabcontent = document.getElementsByClassName('tabcontent');
   } 
   document.getElementById(tabId).style.display = 'block';
   event.currentTarget.className += "is-active";
+  displayItems();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  tabcontent = document.getElementsByClassName('tabcontent');
+  displayitems = document.getElementsByClassName('displayitem');
+  for (i=0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = 'none';
+  }
+  tablinks = document.getElementsByClassName('tablinks')
+  for (i=0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace('is-active', '');
+  } 
+  document.getElementById(category).style.display = 'block';
+  displayItems();
+})
+
+function displayItems() {
+  Array.from(displayitems).forEach(element => {
+    if(element.childNodes[1].childNodes[1].innerText.toLowerCase().includes('<%= params[:search ]%>'.toLowerCase())) {
+      element.style.display = 'block'
+    } else {
+      element.style.display = 'none'
+    }
+  })
+
 }
 </script>

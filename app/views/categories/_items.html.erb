@@ -3,7 +3,7 @@
 <div class="card-pos card columns is-variable">
 <% Product.all.each do |product| %>
   <% if product.categories[0].name == "Books" %>
-  <div class="cardstuff column">
+  <div class="displayitem column">
   <header class="card-header">
   <p class="card-header-title text has-text-centered">
     <%= product.name %>
@@ -31,7 +31,7 @@
   <div class="card-pos card columns is-variable" class="tabcontent">
 <% Product.all.each do |product| %>
   <% if product.categories[0].name == "Electronics" %>
-  <div class="cardstuff column">
+  <div class="displayitem column">
   <header class="card-header">
   <p class="card-header-title text has-text-centered">
     <%= product.name %>
@@ -59,7 +59,7 @@
 <div class="card-pos card columns is-variable">
 <% Product.all.each do |product| %>
   <% if product.categories[0].name == "Sporting" %>
-  <div class="cardstuff column">
+  <div class="displayitem column">
   <header class="card-header">
   <p class="card-header-title text has-text-centered">
     <%= product.name %>
@@ -87,7 +87,7 @@
   <div class="card-pos card columns is-variable">
 <% Product.all.each do |product| %>
   <% if product.categories[0].name == "Clothing" %>
-  <div class="cardstuff column">
+  <div class="displayitem column">
   <header class="card-header">
   <p class="card-header-title text has-text-centered">
     <%= product.name %>
@@ -115,11 +115,11 @@
 <div class="card-pos card columns is-variable">
 <% Product.all.each do |product| %>
   <% if product.categories[0].name == "Vehicles" %>
-  <div class="cardstuff column">
+  <div class="displayitem column">
   <header class="card-header">
-  <p class="card-header-title text has-text-centered">
-    <%= product.name %>
-  </p>
+    <p class="card-header-title text has-text-centered">
+      <%= product.name %>
+    </p>
   </header>
   <figure class="image">
   <img src="http://lorempixel.com/200/200" alt="Placeholder image">
