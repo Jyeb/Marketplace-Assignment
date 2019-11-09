@@ -16,18 +16,13 @@
   <label class="label"<%= f.label :description %></label>
   <input class="input"<%= f.text_field :description %>
 </div>
+
 <p class="control">
   <span class="select">
-    <select>
-    <option>All</option>
-    <% Category.all.each do |category| %>
-        <option><%= category.name %></option>
-    <% end %>
-    </select>
+    <%= f.select :category, options_for_select(Category.all.map{ |cat| [cat.name, cat.id]} ), {prompt:'select'}%>
   </span>
 </p>
 <br>
-
 <div class="columns">
   <div class="column">
     <button class="button is-primary" type="submit">Sell Item</button>

@@ -7,17 +7,22 @@ class ProductsController < ApplicationController
     @product = Product.new
   end
 
+  def show
+    @product = Product.all.find(params[:id])
+  end
+
   def edit
   end
 
   def create
-    @product = product.create(product_params)
+    @product = current_user.products.create(product_params)
     @product.product_image.attach(product_params[:product_image])
+    @product.categories << Category.find(params[:category])
+
     if @product.save 
       redirect_to root_path
     else 
       flash[:alert] = product.errors.full_messages.join('<br>')
-      # redirect_to 
     end 
   end
 
@@ -26,6 +31,6 @@ class ProductsController < ApplicationController
 
   private 
   def product_params 
-    params.require(:product).permit(:name, :price, :rating, :description)
+    params.permit(:name, :price, :description, :product_image)
   end
 end

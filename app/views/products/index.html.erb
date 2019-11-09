@@ -3,7 +3,8 @@
 <%= render 'layouts/searchbar' %>
  <div class="card-pos card columns is-variable">
 <% @products.sample(10).each do |product| %>
-  <div class="cardstuff column">
+<%= link_to show_product_path(product) do %>
+  <div class="displayitem column">
     <header class="card-header">
       <p class="card-header-title text has-text-centered">
         <%= product.name %>
@@ -23,5 +24,6 @@
       <li class="card-footer-item"><%=  category_helper(product)%></li>
     </footer>
     </div>
+    <% end %>
 <% end %>
 </div>
