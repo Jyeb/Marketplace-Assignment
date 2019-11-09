@@ -8,6 +8,7 @@
 Category.destroy_all
 Product.destroy_all
 User.destroy_all
+
 books = Category.create([
   {
   name: "Books",
