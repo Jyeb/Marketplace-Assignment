@@ -12,6 +12,5 @@ Rails.application.routes.draw do
   post 'product', to: 'products#create'
   get 'products/:id', to: 'products#show', as: 'show_product'
   get 'add_category', to: 'categories#new'
-
   root 'products#index'
 end
