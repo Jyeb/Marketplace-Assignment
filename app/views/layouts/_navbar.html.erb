@@ -4,10 +4,10 @@
   <li class="nav-item navbar-item"><%= link_to('About', about_path) %></li>
   <li class="nav-item navbar-item"><%= link_to('Contact', contact_path) %></li>
     <div class="navbar-item has-dropdown is-hoverable">
-    <li class="navbar-item"><%= link_to('Categories', categories_path, class: "navbar-link") %></li>
+    <li class="navbar-item"><%= link_to('Categories', categories_path(category: 'All'), class: "navbar-link") %></li>
     <div class="navbar-dropdown">
     <% Category.all.each do |category| %>
-      <%= link_to(category.name, categories_path, class: "navbar-item") %>
+      <%= link_to(category.name, categories_path(category: category.name), class: "navbar-item") %>
     <% end %>
   </div>
   </div>
@@ -26,9 +26,3 @@
   </div>
 </div>
 </nav>
-
-<script type="text/javascript"> 
-function displayCategory() {
-
-})
-</script>
