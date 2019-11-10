@@ -10,6 +10,11 @@ class ProductsController < ApplicationController
   def show
     @product = Product.all.find(params[:id])
   end
+  
+  def cart  
+    @shopping_cart = []
+    @product = Product.all.find(params[:id])
+  end
 
   def edit
   end
@@ -27,6 +32,9 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    Product.all.find(params[:id]).destroy
+    redirect_to root_path 
+    flash[:alert] = "You have successfully purchased your item"
   end
 
   private 

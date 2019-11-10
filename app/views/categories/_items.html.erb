@@ -20,7 +20,7 @@
   <footer class="card-footer">
   <li class="card-footer-item"><%= product.price %></li>
   <li class="card-footer-item"> <%= product.rating %></li>
-  <li class="card-footer-item"><%=  category_helper(product)%></li>
+  <li class="card-footer-item"><%=  product.categories[0].name %></li>
   </div>
   </footer>
   <% end %>
@@ -48,7 +48,7 @@
   <footer class="card-footer">
   <li class="card-footer-item"><%= product.price %></li>
   <li class="card-footer-item"> <%= product.rating %></li>
-  <li class="card-footer-item"><%=  category_helper(product)%></li>
+  <li class="card-footer-item"><%=  product.categories[0].name%></li>
   </footer>
   </div>
   <% end %>
@@ -76,7 +76,7 @@
   <footer class="card-footer">
   <li class="card-footer-item"><%= product.price %></li>
   <li class="card-footer-item"> <%= product.rating %></li>
-  <li class="card-footer-item"><%=  category_helper(product)%></li>
+  <li class="card-footer-item"><%=  product.categories[0].name%></li>
   </footer>
   </div>
   <% end %>
@@ -104,7 +104,7 @@
   <footer class="card-footer">
   <li class="card-footer-item"><%= product.price %></li>
   <li class="card-footer-item"> <%= product.rating %></li>
-  <li class="card-footer-item"><%=  category_helper(product)%></li>
+  <li class="card-footer-item"><%=  product.categories[0].name%></li>
   </footer>
   </div>
   <% end %>
@@ -132,7 +132,7 @@
   <footer class="card-footer">
   <li class="card-footer-item"><%= product.price %></li>
   <li class="card-footer-item"> <%= product.rating %></li>
-  <li class="card-footer-item"><%=  category_helper(product)%></li>
+  <li class="card-footer-item"><%=  product.categories[0].name%></li>
   </footer>
   </div>
   <% end %>
