@@ -20,11 +20,12 @@ The app will contain all of the rubric required features as well as implementati
  All users will be given the ability to perform CRUD operations on their user account, along with products owned by a particular user. A navigation bar is also a feature of the application allowing ease of use. A search option will also be featured, which will make database calls to display the requested information.  
 
 ## Sitemap
+The sitemap below slightly differs from the final product. Initially, the website contained an additional two static pages being about and contact page, at the time of project submission information for these pages was lackluster and as such they were removed. It can be seen that the flow between pages is rather simplistic, and creates for an enjoyable user experience, with the ability to redirect to the desired page with minimal navigation. 
 
-![Entity Relationship Diagram](https://github.com/Jyeb/Marketplace-Assignment/blob/master/docs/Sitemap.png)
+![Sitemap](https://github.com/Jyeb/Marketplace-Assignment/blob/master/docs/Sitemap.png)
 
 ## Screenshots
-
+Below are screenshots of the various pages, features and functionality of the application. 
 ![Screenshot](https://github.com/Jyeb/Marketplace-Assignment/blob/master/docs/Website-walkthrough1.png)
 ![Screenshot](https://github.com/Jyeb/Marketplace-Assignment/blob/master/docs/Website-walkthrough2.png)
 ![Screenshot](https://github.com/Jyeb/Marketplace-Assignment/blob/master/docs/Website-walkthrough3.png)
@@ -40,7 +41,8 @@ The app will contain all of the rubric required features as well as implementati
 ![Screenshot](https://github.com/Jyeb/Marketplace-Assignment/blob/master/docs/Website-walkthrough12.png)
 ![Screenshot](https://github.com/Jyeb/Marketplace-Assignment/blob/master/docs/Website-walkthrough13.png)
 
-## User Stories/ProjectTask Allocation
+## User Stories/Project Task Allocation
+Both the user stories and task allocation were done through Trello. The checklist and label features were used to gauge the status of individual tasks, by swapping tasks from red to green upon completion. 
 
 ![Trello Board](https://github.com/Jyeb/Marketplace-Assignment/blob/master/docs/userstories-tasks.png)
 ## Wireframes
@@ -49,7 +51,7 @@ Insert wireframes here
 
 ## ERD (Entity Relationship Diagram)
 
-Below is the entity relationship diagram which displays the model relation using computer science notation. Listed below, it states that user products have and belong to many categories, which creates a specialized join table. The database is setup to allow for this interaction, however the MVP product is yet to give users the ability to assign multiple categories to a product, implementation of this feature in further iterations will be simplified by the fact the database is already constructed to allow this behavior. 
+Below is the entity relationship diagram which displays the model relation using computer science notation. Listed below, it states that user products have and belong to many categories, which creates a specialized join table. The database is setup to allow for this interaction, however the MVP product is yet to give users the ability to assign multiple categories to a product, implementation of this feature in further iterations will be simplified by the fact the database is already constructed to allow this behavior. The Order model was also made obsolete as the ordering functionality was completed using the product model, however the current approach is rather limited in terms of capability, and further iterations would see development incorporating the Order model. 
 The information below represents the following relationships.
   * User has_many products
   * User has_many orders
@@ -104,10 +106,9 @@ The target audience of the application is retailers who wish to expand their cus
 
 Listed below is the tech stack used for website development, and the areas which the technology was used.
   * Backend Framework (Ruby on Rails)
+
   * Frontend (Ruby, Javascript, HTML,  scss)
   * Deployment Platform (Heroku) 
   * Git repository (Github) 
   * Image hosting (Cloudinary) 
-  * Payment options (Stripe)
-   
 
