@@ -132,7 +132,7 @@
     </header>
     <figure class="image">
     <div style="max-width:400px; max-height:400px;">
-    <% image_tag(product.product_image, style:"width:100%,height100%")%>
+    <% image_tag(product.product_image, style:"width:100%,height100%") if product.product_image.attached? %>
     </div>
     </figure>
     <div class="card-content">
