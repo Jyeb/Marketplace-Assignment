@@ -4,12 +4,20 @@ body {
   background-color: #f4f4f4;
 
 }
-
+.navbar-link {
+  color: white;
+}
 a {
   color: white; 
   &:hover {
     color: white;
   }
+}
+.card-content {
+  color: black;
+}
+.card-footer {
+  color: black;
 }
 
 .hover-color {
@@ -79,3 +87,6 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+

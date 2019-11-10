@@ -23,7 +23,6 @@ class ProductsController < ApplicationController
     @product = current_user.products.create(product_params)
     @product.product_image.attach(product_params[:product_image])
     @product.categories << Category.find(params[:category])
-
     if @product.save 
       redirect_to root_path
     else 
