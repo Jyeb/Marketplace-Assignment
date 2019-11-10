@@ -1,9 +1,17 @@
+    
+<script type="text/javascript">
+  var button =  document.getElementsByTagName('delete');
+  var modal =  document.getElementsByClass('modal');
+  function hideModal() {
+    modal.style.display: 'none';
+  }
+</script>
     <div class="modal is-active">
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
         <p class="modal-card-title"><% @product.name %></p>
-        <button class="delete" aria-label="close"></button>
+        <button onclick="hideModal()" class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
         <h1 class="title has-text-centered"><%= @product.name %></h1>
@@ -17,14 +25,13 @@
       </section>
       <footer class="modal-card-foot">
       <% if user_signed_in? %>
-        <button class="button is-success"><%= link_to "Add to Cart", cart_path(id: @product.id) %></button>
+        <button class="button is-success is-outlined"><%= link_to "Add to Cart", cart_path(id: @product.id) %></button>
       <% else %>
         <p>Please login to continue</p>
       <% end %>
-        <button class="button"><%= link_to "Cancel", root_path %></button>
+        <button class="button is-info is-outlined"><%= link_to "Cancel", root_path %></button>
       </footer>
     </div>
     </div>
   </button>
-
 

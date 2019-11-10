@@ -3,54 +3,58 @@
 <div class="card-pos card columns is-variable">
 <% Product.all.each do |product| %>
   <% if product.categories[0].name == "Books" %>
-  <div class="displayitem column">
-  <header class="card-header">
-  <p class="card-header-title text has-text-centered">
-    <%= product.name %>
-  </p>
-  </header>
-  <figure class="image">
-  <img src="http://lorempixel.com/200/200" alt="Placeholder image">
-  </figure>
-  <div class="card-content">
-  <div class="content">
-    <%= product.description %>
-  </div>
-  </div>
-  <footer class="card-footer">
-  <li class="card-footer-item"><%= product.price %></li>
-  <li class="card-footer-item"> <%= product.rating %></li>
-  <li class="card-footer-item"><%=  product.categories[0].name %></li>
-  </div>
-  </footer>
+    <%= link_to show_product_path(product) do %>
+    <div class="displayitem column">
+    <header class="card-header">
+    <p class="card-header-title text has-text-centered">
+      <%= product.name %>
+    </p>
+    </header>
+    <figure class="image">
+    <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+    </figure>
+    <div class="card-content">
+    <div class="content">
+      <%= product.description %>
+    </div>
+    </div>
+    <footer class="card-footer">
+    <li class="card-footer-item"><%= product.price %></li>
+    <li class="card-footer-item"> <%= product.rating %></li>
+    <li class="card-footer-item"><%=  product.categories[0].name %></li>
+    </div>
+    </footer>
+    <% end %>
   <% end %>
 <% end %>
-</div>
-</div>
+  </div>
+  </div>
 <div id="Electronics" class="tabcontent">
   <div class="card-pos card columns is-variable" class="tabcontent">
 <% Product.all.each do |product| %>
-  <% if product.categories[0].name == "Electronics" %>
-  <div class="displayitem column">
-  <header class="card-header">
-  <p class="card-header-title text has-text-centered">
-    <%= product.name %>
-  </p>
-  </header>
-  <figure class="image">
-  <img src="http://lorempixel.com/200/200" alt="Placeholder image">
-  </figure>
-  <div class="card-content">
-  <div class="content">
-    <%= product.description %>
-  </div>
-  </div>
-  <footer class="card-footer">
-  <li class="card-footer-item"><%= product.price %></li>
-  <li class="card-footer-item"> <%= product.rating %></li>
-  <li class="card-footer-item"><%=  product.categories[0].name%></li>
-  </footer>
-  </div>
+  <%= link_to show_product_path(product) do %>
+    <% if product.categories[0].name == "Electronics" %>
+    <div class="displayitem column">
+    <header class="card-header">
+    <p class="card-header-title text has-text-centered">
+      <%= product.name %>
+    </p>
+    </header>
+    <figure class="image">
+    <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+    </figure>
+    <div class="card-content">
+    <div class="content">
+      <%= product.description %>
+    </div>
+    </div>
+    <footer class="card-footer">
+    <li class="card-footer-item"><%= product.price %></li>
+    <li class="card-footer-item"> <%= product.rating %></li>
+    <li class="card-footer-item"><%=  product.categories[0].name%></li>
+    </footer>
+    </div>
+    <% end %>
   <% end %>
 <% end %>
 </div>
@@ -59,26 +63,28 @@
 <div class="card-pos card columns is-variable">
 <% Product.all.each do |product| %>
   <% if product.categories[0].name == "Sporting" %>
-  <div class="displayitem column">
-  <header class="card-header">
-  <p class="card-header-title text has-text-centered">
-    <%= product.name %>
-  </p>
-  </header>
-  <figure class="image">
-  <img src="http://lorempixel.com/200/200" alt="Placeholder image">
-  </figure>
-  <div class="card-content">
-  <div class="content">
-    <%= product.description %>
-  </div>
-  </div>
-  <footer class="card-footer">
-  <li class="card-footer-item"><%= product.price %></li>
-  <li class="card-footer-item"> <%= product.rating %></li>
-  <li class="card-footer-item"><%=  product.categories[0].name%></li>
-  </footer>
-  </div>
+    <%= link_to show_product_path(product) do %>
+    <div class="displayitem column">
+    <header class="card-header">
+    <p class="card-header-title text has-text-centered">
+      <%= product.name %>
+    </p>
+    </header>
+    <figure class="image">
+    <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+    </figure>
+    <div class="card-content">
+    <div class="content">
+      <%= product.description %>
+    </div>
+    </div>
+    <footer class="card-footer">
+    <li class="card-footer-item"><%= product.price %></li>
+    <li class="card-footer-item"> <%= product.rating %></li>
+    <li class="card-footer-item"><%=  product.categories[0].name%></li>
+    </footer>
+    </div>
+    <% end %>
   <% end %>
 <% end %>
 </div>
@@ -86,6 +92,7 @@
 <div id="Clothing" class="tabcontent">
   <div class="card-pos card columns is-variable">
 <% Product.all.each do |product| %>
+<%= link_to show_product_path(product) do %>
   <% if product.categories[0].name == "Clothing" %>
   <div class="displayitem column">
   <header class="card-header">
@@ -109,33 +116,38 @@
   </div>
   <% end %>
 <% end %>
+<% end %>
 </div>
 </div>
 <div id="Vehicles" class="tabcontent">
 <div class="card-pos card columns is-variable">
 <% Product.all.each do |product| %>
-  <% if product.categories[0].name == "Vehicles" %>
-  <div class="displayitem column">
-  <header class="card-header">
-    <p class="card-header-title text has-text-centered">
-      <%= product.name %>
-    </p>
-  </header>
-  <figure class="image">
-  <img src="http://lorempixel.com/200/200" alt="Placeholder image">
-  </figure>
-  <div class="card-content">
-  <div class="content">
-    <%= product.description %>
-  </div>
-  </div>
-  <footer class="card-footer">
-  <li class="card-footer-item"><%= product.price %></li>
-  <li class="card-footer-item"> <%= product.rating %></li>
-  <li class="card-footer-item"><%=  product.categories[0].name%></li>
-  </footer>
-  </div>
+    <% if product.categories[0].name == "Vehicles" %>
+    <%= link_to show_product_path(product) do %>
+    <div class="displayitem column">
+    <header class="card-header">
+      <p class="card-header-title text has-text-centered">
+        <%= product.name %>
+      </p>
+    </header>
+    <figure class="image">
+    <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+    </figure>
+    <div class="card-content">
+    <div class="content">
+      <%= product.description %>
+    </div>
+    </div>
+    <footer class="card-footer">
+    <li class="card-footer-item"><%= product.price %></li>
+    <li class="card-footer-item"> <%= product.rating %></li>
+    <li class="card-footer-item"><%=  product.categories[0].name%></li>
+    </footer>
+    </div>
+    <% end %>
   <% end %>
 <% end %>
 </div>
 </div>
+
+
