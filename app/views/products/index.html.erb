@@ -11,7 +11,13 @@
       </p>
     </header>
     <figure class="image">
-      <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+      <div style="max-width:400px; max-height:400px;">
+      <% if product.product_image.attached? %>
+        <%= image_tag(product.product_image, style:"width:100%; height: 100%;")  %>
+      <% else %>
+        <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+      <% end%>
+    </div>
     </figure>
     <div class="card-content">
       <div class="content">
@@ -21,7 +27,7 @@
     <footer class="card-footer">
       <li class="card-footer-item"><%= product.price %></li>
       <li class="card-footer-item"> <%= product.rating %></li>
-      <li class="card-footer-item"><%=  product.categories[0].name %></li>
+      <li class="card-footer-item"><%=  product.categories[0].name, class: 'item-color' %></li>
     </footer>
     </div>
     <% end %>

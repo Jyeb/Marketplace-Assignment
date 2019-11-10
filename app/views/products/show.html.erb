@@ -15,7 +15,13 @@
       </header>
       <section class="modal-card-body">
         <h1 class="title has-text-centered"><%= @product.name %></h1>
-        <img class="image has-image-centered" src="http://lorempixel.com/200/200" alt="Placeholder image">
+          <div style="max-width:400px; max-height:400px;">
+          <% if product.product_image.attached? %>
+            <%= image_tag(product.product_image, style:"width:100%; height: 100%;")  %>
+          <% else %>
+            <img src="http://lorempixel.com/200/200" alt="Placeholder image">
+          <% end%>
+          </div>
         <br>
         <p class="text has-text-centered"><%= @product.description %></p>
         <footer class="card-footer">
