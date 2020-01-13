@@ -1,7 +1,6 @@
 # Two Sided Marketplace 
 
 Github URL: https://github.com/Jyeb/Marketplace-Assignment
-Heroku Link: https://stark-gorge-91671.herokuapp.com/
 
 ## Problem and purpose
 
